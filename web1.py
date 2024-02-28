@@ -24,8 +24,8 @@ for i in range(1, NO_q+1):
 ########################################################################
 webCamFeed = cam
 pathImage = path
-heightImg = 600
-widthImg  = 600
+heightImg = 700
+widthImg  = 700
 questions= NO_q
 choices= NO_c
 ans= ans_key
