@@ -33,6 +33,12 @@ ans = ans_key
 count = 0
 frame_placeholder = st.empty()
 stop_button_pressed = st.button("Stop")
+for i in range(10):  # Try indices from 0 to 9
+    cap = cv2.VideoCapture(i)
+    if not cap.isOpened():
+        break
+    cap.release()
+    print(f"Camera index {i} is available.")
 
 if st.button('Start Grading'):
     if cam:
