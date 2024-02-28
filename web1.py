@@ -37,7 +37,7 @@ stop_button_pressed = st.button("Stop")
 
 if st.button('Start Grading'):
     if cam:
-        cap = cv2.VideoCapture(1)
+        cap = cv2.VideoCapture(-1)
         cap.set(10, 160)
 
     while (webCamFeed or path) and not stop_button_pressed:
