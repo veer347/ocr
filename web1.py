@@ -64,7 +64,13 @@ if st.button('Start Grading'):
         if stop_button_pressed:
             cv2.destroyAllWindows()
             break
-
+for i in range(10):  # Try indices from 0 to 9
+    cap = cv2.VideoCapture(i)
+    if not cap.isOpened():
+        break
+    cap.release()
+    print(f"Camera index {i} is available.")
+    
 # RELEASE RESOURCES IF STOP BUTTON PRESSED
 if stop_button_pressed and cam:
     try:
